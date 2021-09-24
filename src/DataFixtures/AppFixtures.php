@@ -16,7 +16,7 @@ class AppFixtures extends Fixture
     $faker = Factory::create('fr_FR');
     for ($i=0; $i < 10 ; $i++) { 
         $post = new Post();
-        $post->setTitle('Titre 1')
+        $post->setTitle("Titre $i")
             ->setContent($faker->sentence($nbWords =2, $variableNbWords = true))
             ->setAuthor($faker->name($nbWords =10, $variableNbWords = true))
             ->setCreatedAt($faker->dateTimeBetween('-6 months'));
